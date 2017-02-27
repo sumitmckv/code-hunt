@@ -60,7 +60,7 @@ we will take one example to understand array in depth where we will take user in
 
 
 
-#include<stdio.h>
+    #include<stdio.h>
     int main() {
       int n; //variable to store size of the array
       printf("Enter Size of the Array: ");
