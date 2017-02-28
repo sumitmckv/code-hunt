@@ -3,8 +3,8 @@ The litarl meaning of array is an impressive display or range of a particular ty
 Though in computer science the meaning is slightly different. 
 In computer science a bunch of data bind together in a variable is called an array.
 
-**In case of Python** there is no concept of arrays, instead Python has the concepts of list. 
-Lists in python could be defined as an ordered container of arbitrary length 
+**In case of Python** there is no concept of arrays, instead Python has the concept of list. 
+Lists in python can be defined as an ordered container of arbitrary length 
 that can hold a heterogenous collection of objects (their types do not matter and can be freely mixed)
 
 To understand the concept better let's define a list :
@@ -35,7 +35,7 @@ A special Way of accessing data in python:
 print cube[-1] // 125
 print cube[-5] // 1
 ```
->**Note** : While accessing data from negetive indexes you will have to conside that negetive index starts from 1 not from 0**
+>**Note** : While accessing data from negetive indexes you will have to conside that negetive index starts from 1 not from 0
 
 **_CHANGE VALUES IN LIST BY ACCESSING THEM DIRECTLY_**
 Unlike strings, which are immutable, lists are a mutable type, i.e. it is possible to change their content:
@@ -61,7 +61,7 @@ for example
 python cube.insert(0,"cube") // [cube,0,8,27,64,125,216]
 ```
 
-Here the first instance is the index number means where you want insert the element.
+Here the first instance is the index number means where you want to insert the element.
 
 If someone wants to add the elements always at the end of a list then he will have to use the keyword extend
 ```python
