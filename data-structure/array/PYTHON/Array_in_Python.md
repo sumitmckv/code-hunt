@@ -1,62 +1,76 @@
-The litarl meaning of array is "an impressive display or range of a particular type of thing". 
+### _The litarl meaning of array_:
+The litarl meaning of array is an impressive display or range of a particular type of thing. 
 Though in computer science the meaning is slightly different. 
 In computer science a bunch of data bind together in a variable is called an array.
 
-In case of Python there is no concept of arrays, instead Python has the concepts of list. 
+**In case of Python** there is no concept of arrays, instead Python has the concepts of list. 
 Lists in python could be defined as an ordered container of arbitrary length 
 that can hold a heterogenous collection of objects (their types do not matter and can be freely mixed)
 
 To understand the concept better let's define a list :
-blank_list = [] [Note : In Python to define a varible you don't have to write it's type while defining or assigning,
-Python compiler takes care of it]
+```python
+        blank_list = [] 
+```
+>**Note** : _In Python to define a varible you don't have to write it's type while defining or assigning,
+Python compiler takes care of it_
+
 Now our defined list blank_list holds an empty list.
 Now Let's see one of the main feature of list in python.
 
+```python
 new_list = [1,2,3,"string",2.45,['a','b','c']]
-
-As you can see and as I said in the definition itself that in python,lists can hold heterogenous data.[Note: While defining a list never take the variable name as "list". As list is a pre-defined object in python]
+```
+As you can see and as I said in the definition itself that in python,lists can hold heterogenous data.
+>**Note**: While defining a list never take the variable name as "list". As list is a pre-defined object in python
 
 Lete's see some operations on Lists:
-
+```python
 cube = [1,8,27,64,125]
 print cube[0] // 1
 print cube[4] //125
-
+```
 The above is the way how you access data in lists. As most programming languages python's index also starts from 0.
 A special Way of accessing data in python:
-
+```python
 print cube[-1] // 125
 print cube[-5] // 1
+```
+>**Note** : While accessing data from negetive indexes you will have to conside that negetive index starts from 1 not from 0**
 
-**Note : While accessing data from negetive indexes you will have to conside that negetive index starts from 1 not from 0**
-
-CHANGE VALUES IN LIST BY ACCESSING THEM DIRECTLY
+**_CHANGE VALUES IN LIST BY ACCESSING THEM DIRECTLY_**
 Unlike strings, which are immutable, lists are a mutable type, i.e. it is possible to change their content:
-
+```python
 >>> cube = [1, 8, 27, 65, 125]  # something's wrong here
 >>> 4 ** 3  # the cube of 4 is 64, not 65!
 64
 >>> cube[3] = 64  # replace the wrong value
 >>> cube
 [1, 8, 27, 64, 125]
-
-ADD & DELETE ELEMENTS IN LIST
+```
+#### ADD & DELETE ELEMENTS IN LIST
 
 To add an element in a list the keyword which can be used is append
 for example lets add 216 which is cube of 6 in the cube list
-then we do cube.append(216) // [1,8,27,64,125,216]
+then we do 
+```python
+cube.append(216) // [1,8,27,64,125,216]
+```
+Now if you want to insert element at a particular index then you will need to use the **insert** keyword.
+for example 
+```
+python cube.insert(0,"cube") // [cube,0,8,27,64,125,216]
+```
 
-Now if you want to insert element at a particular index then you will need to use the "insert" keyword.
-for example cube.insert(0,"cube") // [cube,0,8,27,64,125,216]
 Here the first instance is the index number means where you want insert the element.
 
 If someone wants to add the elements always at the end of a list then he will have to use the keyword extend
+```python
 >>>cube.extend('a','b','c') // [cube,0,8,27,64,125,216,a,b,c]
-
+```
 Now Let's think backwards, Someone has given you list and told you the elements inside it,
 then how do you find out the index of the element.
 
-
+```python
 indx,given_num =0,5
 given_list = [0,1,2,3,4,5,6,7,8,9] // Assume you can't see the elements of this list
 for num in given_list:
@@ -64,108 +78,73 @@ for num in given_list:
 		    print(indx)
 	 else:
 		    indx= indx+ 1
+```
 
-
-Or you can just use the inbuild given_list.index(given_num)
+Or you can just use the inbuild ``` given_list.index(given_num) ```
 
 Let's see the various ways to remove elements from a list
 if you want to remove a particular element without knowing it's index then just use remove build in function
 for example:
-
+```pyhon
 given_list = [1,2,3,4,5]
 given_list.remove[4] // [1,2,3,5]
 suppose you want to remove the element of a particular element from the  list then you will use the pop method
 given_list.pop(1) //2 (Removes the element at index 1 and returns it)
+```
 
-
-List concatenation:
+##### List concatenation:
 The concatenation is very straightforward for python lists, suppose you have two lists like
-squres = [1,4,9,16]
+```squres = [1,4,9,16]```
 and
-cubes = [1,8,27]
+```cubes = [1,8,27]```
 Now you want to concatenate them. Lets do them very easily just simply using the "+" option
-
+```python
 squres + cubes // [1,4,9,16,1,8,27] [Note : See properly duplicate values are allowed]
-
+```
 The Len Keyword:
 The len keyword used to determine the length of the list
 lets take the previous example:
-
+```python
 x = squres + cubes // [1,4,9,16,1,8,27]
 len(x) // 7
-
-The Count Keyword:
+```
+##### The Count Keyword:
 The count keyword is an awesome built in function to find the number of times an element present in a list
 example:
-
+```python
 given_list = [1,2,3,4,5,6,7,1,2,3,4,1,1,1,1,1]
 given_list.count(1) //7
-
-The Reverse Keyword:
+```
+##### The Reverse Keyword:
 
 The reverse keyword is very straightforward it simply reverses the element of the list
 example
-
+```python
 given_list = [1,2,3,4,5]
 given_list.reverse() //[5,4,3,2,1]
-
+```
 The Max and Min Method:
 The max method finds out the maximum element in a list
-
+```python
 given_list = [1,32,45,-2,43]
 max(given_list) // 45
 min(given_list) //-2
+```
+>**Note:** Be very careful with using max and min in Python 2 and Python 3.
 
-**Note: Be very careful with using max and min in Python 2 and Python 3.**
 According to Python 2 if a list contains any string value along with numbers 
 then python will always return the string as max but Python 3 has removed this problem and it immediately raises a type
-error : TypeError: unorderable types: str() > int(). Same is with min
 
-The list Method:
+```error : TypeError: unorderable types: str() > int(). Same is with min```
+
+##### The list Method:
 As I previously pointed out that list is a built-in method in Python Now we will explore the use of list
-The method list() takes sequence types and converts them to lists. This is used to convert a given tuple into list.
+The method ```list()``` takes sequence types and converts them to lists. This is used to convert a given tuple into list.
 
-**Note: Tuple are very similar to lists with only difference 
-that element values of a tuple can not be changed and tuple elements are put between parentheses instead of square bracket**
+>**Note:** Tuple are very similar to lists with only difference 
+that element values of a tuple can not be changed and tuple elements are put between parentheses instead of square bracket
 
+```python
 given_tuple = (123,"hi",43,"hello") // A tuple
 new_list = list(given_tuple) // Returns a list with the exact elements of the tuple [123,"hi",43,"hello"]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
